@@ -1,2 +1,26 @@
 ﻿  main.c
-  kursach.vcxproj -> D:\Kursach_git\kursach\x64\Debug\kursach.exe
+D:\Kursach_git\kursach\kursach\main.c(24,20): warning C4013: 'vvod' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(24,45): warning C4047: '=': 'stab *' differs in levels of indirection from 'int'
+D:\Kursach_git\kursach\kursach\main.c(28,13): warning C4013: 'vyvod' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(38,13): warning C4013: 'newdata' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(48,13): warning C4013: 'deldata' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(58,13): warning C4013: 'correct' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(67,13): warning C4013: 'finddata' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(70,13): warning C4013: 'bubbleSortText' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(75,13): warning C4013: 'bubbleSortNum' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(79,13): warning C4013: 'procdata' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(84,13): warning C4013: 'fvvod' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(88,20): warning C4013: 'fvivod' undefined; assuming extern returning int
+D:\Kursach_git\kursach\kursach\main.c(88,40): warning C4047: '=': 'stab *' differs in levels of indirection from 'int'
+main.obj : error LNK2019: unresolved external symbol vvod referenced in function main
+main.obj : error LNK2019: unresolved external symbol vyvod referenced in function main
+main.obj : error LNK2019: unresolved external symbol newdata referenced in function main
+main.obj : error LNK2019: unresolved external symbol deldata referenced in function main
+main.obj : error LNK2019: unresolved external symbol correct referenced in function main
+main.obj : error LNK2019: unresolved external symbol finddata referenced in function main
+main.obj : error LNK2019: unresolved external symbol bubbleSortText referenced in function main
+main.obj : error LNK2019: unresolved external symbol bubbleSortNum referenced in function main
+main.obj : error LNK2019: unresolved external symbol procdata referenced in function main
+main.obj : error LNK2019: unresolved external symbol fvvod referenced in function main
+main.obj : error LNK2019: unresolved external symbol fvivod referenced in function main
+D:\Kursach_git\kursach\x64\Debug\kursach.exe : fatal error LNK1120: 11 unresolved externals
