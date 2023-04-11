@@ -17,8 +17,6 @@ int main(void) {
             while (getchar() != '\n')  continue;
         }
 
-
-
         switch (ans) {
         case 160:
             head = vvod(head, &tail, &count);
@@ -55,7 +53,8 @@ int main(void) {
                 res = scanf("%d", &n);
                 while (getchar() != '\n')  continue;
             }
-            correct(head, n); break;
+            correct(head, n); 
+            break;
         case 165:
             printf("Введите номер поля, по которому необходимо произвести поиск: ");
             res = scanf("%d", &n);
@@ -67,24 +66,23 @@ int main(void) {
             finddata(head, n);
             break;
         case 166:
-            bubbleSortText(head, &count);
+            // Сортировка по тектовому полю
 
             break;
 
         case 167:
-            bubbleSortNum(head, &count);
+            // Сортировка по числовому полю
+
 
             break;
         case 168:
-            procdata(head);
+            // Обработка хранимой в файле информации
 
             break;
         case 170:
-
             fvvod(head);
             break;
         case 171:
-
             head = fvivod(head, &count);
             break;
         case 48: printf("Выход из программы");

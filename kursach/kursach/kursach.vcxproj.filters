@@ -18,6 +18,30 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vvod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vyvod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newdata.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deldata.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="correct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="finddata.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvvod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvivod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">

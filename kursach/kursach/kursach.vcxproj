@@ -128,7 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="correct.c" />
+    <ClCompile Include="deldata.c" />
+    <ClCompile Include="finddata.c" />
+    <ClCompile Include="fvivod.c" />
+    <ClCompile Include="fvvod.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="newdata.c" />
+    <ClCompile Include="vvod.c" />
+    <ClCompile Include="vyvod.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
