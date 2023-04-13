@@ -24,9 +24,22 @@ newdata(struct  stab *, int);
 deldata(struct  stab *, int);
 
 
+//Сортировка слиянием
+void mergeSortNum(struct stab** headRef, int* kolvo, int dir);
+struct stab* merge(struct stab* a, struct stab* b, int* kolvo, int dir);
+void split(struct stab* source, struct stab** frontRef, struct stab** backRef);
+void mergeSortNumWrapper(struct stab** headRef, int* kolvo, int dir);
+int compareByKPDReverse(struct stab* i1, struct stab* i2);
+int compareByKPD(struct stab* i1, struct stab* i2);
+
+
+
 correct(struct  stab* head, int n);
 finddata(struct  stab* head, int n);
 procdata(struct  stab* head);
 
 fvvod(struct  stab* head);
 struct  stab* fvivod(struct  stab* head, int*);
+
+
+void swap(struct stab*, struct stab*);
