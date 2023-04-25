@@ -24,3 +24,5 @@ deldata(struct  stab* head, int n) {
 	while (getchar() != '\n')
 		continue;
 }
+
+

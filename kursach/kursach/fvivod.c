@@ -6,7 +6,7 @@ struct stab* fvivod(struct stab* head, int* count1) {
     struct stab* current = NULL, * prev = NULL;
     int count;
     // Открытие файла для чтения
-    FILE* fl = fopen("VVOD.txt", "r");
+    FILE* fl = fopen(FILE_NAME, "r");
 
     // Чтение количества элементов из файла
     fscanf(fl, "%d", &count);

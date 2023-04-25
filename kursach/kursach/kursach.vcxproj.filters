@@ -45,10 +45,10 @@
     <ClCompile Include="merge_Mark.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="swap.c">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="merge_KPD.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic_coding.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

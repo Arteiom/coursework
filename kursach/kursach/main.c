@@ -1,33 +1,40 @@
 #include "Header.h"
 
+
 int main(void) {
+
+    #define ALPHABET_SIZE 256
+    #define MAX_FILENAME_LENGTH 256
+
+    char input_filename[MAX_FILENAME_LENGTH];
+    char output_filename[MAX_FILENAME_LENGTH];
     struct  stab* head = NULL, * tail = NULL;
     int i = 0, k = 0, n, res = 0, count = 0;
     unsigned char ans = 0;
 
     int dir = 1;
 
-    setlocale(LC_ALL, "RU");
+    system("chcp 1251>nul");
     while (1) {
         printf("а. Создание справочника в памяти (Ввод данных).\nб. Вывод справочника на экран.\nв. Добавление данных после записи с указанным номером \nг. Удаление данных с указанным номером\nд. Корректировка данных с указанным номером\nе. Поиск данных по любому указанному пользователем полю\nж. Сортировка слиянием по текстовому полю\nз. Сортировка слиянием по числовому полю\nи. Обработка хранимой в файле информации\nк. Сохранение справочника в файл.\nл. Открытие справочника из файла.\n0. выход из программы.\nВыберите номер необходимого варианта:");
 
         scanf("%c", &ans);
         while (getchar() != '\n')  continue;
-        while (ans != 160 && ans != 161 && ans != 162 && ans != 163 && ans != 164 && ans != 165 && ans != 166 && ans != 167 && ans != 168 && ans != 170 && ans != 171 && ans != 48) {
+        while (ans != 'а' && ans != 'б' && ans != 'в' && ans != 'г' && ans != 'д' && ans != 'е' && ans != 'ж' && ans != 'з' && ans != 'и' && ans != 'к' && ans != 'л' && ans != '0') {
             printf("Повторите ввод: ");
             scanf("%c", &ans);
             while (getchar() != '\n')  continue;
         }
 
         switch (ans) {
-        case 160:
+        case 'а':
             head = vvod(head, &tail, &count);
             break;
 
-        case 161:
+        case 'б':
             vyvod(head);
             break;
-        case 162:
+        case 'в':
             printf("Введите номер записи после которой необходимо добавить новый элемент: ");
             res = scanf("%d", &n);
             while (res != 1 || n < 0) {
@@ -37,7 +44,7 @@ int main(void) {
             }
             newdata(head, n);
             break;
-        case 163:
+        case 'г':
             printf("Введите номер записи которую необходимо удалить: ");
             res = scanf("%d", &n);
             while (res != 1 || n < 0) {
@@ -47,7 +54,7 @@ int main(void) {
             }
             deldata(head, n);
             break;
-        case 164:
+        case 'д':
             printf("Введите номер записи которую необходимо откорректировать: ");
             res = scanf("%d", &n);
             while (res != 1 || n < 0) {
@@ -57,7 +64,7 @@ int main(void) {
             }
             correct(head, n); 
             break;
-        case 165:
+        case 'е':
             printf("Введите номер поля, по которому необходимо произвести поиск: ");
             res = scanf("%d", &n);
             while (res != 1 || n < 0) {
@@ -67,30 +74,25 @@ int main(void) {
             }
             finddata(head, n);
             break;
-        case 166:
-
+        case 'ж':
 
             break;
 
-        case 167:
+        case 'з':
             mergeSortNumWrapper(&head, &count, dir);
+            break;
+
+        case 'и':
             
-
-
-
-
+            run_program();
             break;
-        case 168:
-            // Обработка хранимой в файле информации
-
-            break;
-        case 170:
+        case 'к':
             fvvod(head);
             break;
-        case 171:
+        case 'л':
             head = fvivod(head, &count);
             break;
-        case 48: printf("Выход из программы");
+        case '0': printf("Выход из программы");
             return 0;
             break;
         default:

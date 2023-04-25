@@ -1,4 +1,2 @@
-﻿  main.c
-D:\Kursach_git\kursach\kursach\main.c(24,36): warning C4047: 'function': 'stab *' differs in levels of indirection from 'stab **'
-D:\Kursach_git\kursach\kursach\main.c(24,31): warning C4024: 'vvod': different types for formal and actual parameter 2
+﻿  deldata.c
   kursach.vcxproj -> D:\Kursach_git\kursach\x64\Debug\kursach.exe

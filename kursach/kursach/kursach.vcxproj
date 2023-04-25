@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalOptions>/J %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arithmetic_coding.c" />
     <ClCompile Include="merge_Mark.c" />
     <ClCompile Include="merge_KPD.c" />
     <ClCompile Include="correct.c" />
@@ -137,7 +139,6 @@
     <ClCompile Include="fvvod.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="newdata.c" />
-    <ClCompile Include="swap.c" />
     <ClCompile Include="vvod.c" />
     <ClCompile Include="vyvod.c" />
   </ItemGroup>
