@@ -1,5 +1,5 @@
 #include "Header.h" 
-fvvod(struct  stab* head) {
+void fvvod(struct  stab* head) {
     // Объявление указателя на текущий элемент списка и переменной для подсчета количества элементов
     struct  stab* current = NULL;
     int i = 0;

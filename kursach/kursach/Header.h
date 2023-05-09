@@ -5,6 +5,7 @@
 #include<string.h>
 #include<math.h>
 
+#define FILE_NAME "input.txt"
 
 struct  stab {
 
@@ -18,36 +19,15 @@ struct  stab {
     struct stab* next;
 };
 
-struct stab* vvod(struct  stab*, struct stab*, int*);
+struct stab* vvod(struct stab* head, struct stab** tail, int* count1);
 void vyvod(struct  stab*);
-newdata(struct  stab*, int);
-deldata(struct  stab*, int);
-correct(struct  stab* head, int n);
-finddata(struct  stab* head, int n);
-procdata(struct  stab* head);
-fvvod(struct  stab* head);
+void newdata(struct  stab*, int);
+void deldata(struct  stab*, int);
+void correct(struct  stab* head, int n);
+void finddata(struct  stab* head, int n);
+void procdata(struct  stab* head);
+void fvvod(struct  stab* head);
 struct  stab* fvivod(struct  stab* head, int*);
-
-
-//---Арифметическое кодирование---
-#define MAX_SYMBOLS 256
-#define FILE_NAME "input.txt"
-#define ENCODED_FILE_NAME "encoded.txt"
-#define DECODED_FILE_NAME "decoded.txt"
-
-typedef struct {
-    int low_count[MAX_SYMBOLS];
-    int high_count[MAX_SYMBOLS];
-    int total_count;
-} FrequencyTable;
-
-void build_frequency_table(FILE* input_file, FrequencyTable* freq_table);
-void encode(FILE* input_file, FILE* encoded_file, FrequencyTable* freq_table);
-void decode(FILE* encoded_file, FILE* decoded_file, FrequencyTable* freq_table);
-void run_program();
-//--------------------------------
-
-
 
 
 //------Сортировка слиянием-------
@@ -57,12 +37,30 @@ void split(struct stab* source, struct stab** frontRef, struct stab** backRef);
 void mergeSortNumWrapper(struct stab** headRef, int* kolvo, int dir);
 int compareByKPDReverse(struct stab* i1, struct stab* i2);
 int compareByKPD(struct stab* i1, struct stab* i2);
+
+void mergeSortStr(struct stab** headRef, int* kolvo, int dir);
+struct stab* merge2(struct stab* a, struct stab* b, int* kolvo, int dir);
+void split2(struct stab* source, struct stab** frontRef, struct stab** backRef);
+void mergeSortMarkWrapper(struct stab** headRef, int* kolvo, int dir);
+int compareByMarkReverse(struct stab* i1, struct stab* i2);
+int compareByMark(struct stab* i1, struct stab* i2);
 //--------------------------------
 
 
-
-
-
-
-
-
+//----------Арифметическое кодироование-------------
+void start_model(void);
+void update_model(int symbol);
+void start_inputing_bits(void);
+int input_bit(void);
+void start_outputing_bits(void);
+void output_bit(int bit);
+void done_outputing_bits(void);
+void output_bit_plus_follow(int bit);
+void start_encoding(void);
+void done_encoding(void);
+void start_decoding(void);
+void encode_symbol(int symbol);
+int decode_symbol(void);
+void encode(char* infile, char* outfile);
+void decode(char* infile, char* outfile);
+//---------------------------------------------------

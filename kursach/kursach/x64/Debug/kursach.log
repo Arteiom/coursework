@@ -1,2 +1,17 @@
-﻿  deldata.c
+﻿  arithmetic_coding.c
+  merge_Mark.c
+  merge_KPD.c
+  correct.c
+D:\Kursach_git\kursach\kursach\correct.c(43,21): warning C4098: 'correct': 'void' function returning a value
+  deldata.c
+  finddata.c
+  fvivod.c
+  fvvod.c
+  main.c
+  newdata.c
+D:\Kursach_git\kursach\kursach\newdata.c(13,9): warning C4550: expression evaluates to a function which is missing an argument list
+  vvod.c
+D:\Kursach_git\kursach\kursach\vvod.c(4,6): warning C4101: 'i': unreferenced local variable
+  vyvod.c
+  Generating Code...
   kursach.vcxproj -> D:\Kursach_git\kursach\x64\Debug\kursach.exe

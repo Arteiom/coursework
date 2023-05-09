@@ -1,5 +1,5 @@
 #include "Header.h"
-correct(struct  stab* head, int n) {
+void correct(struct  stab* head, int n) {
     struct  stab* current = NULL;
     int counter = 0, choice;
     current = head;

@@ -1,6 +1,6 @@
 #include "Header.h"
 
-newdata(struct  stab* head, int n) {
+void newdata(struct  stab* head, int n) {
     struct  stab* current = NULL, * prev = NULL; // указатель на текущий и предыдущий элемент списка
     struct  stab* new = (struct  stab*)malloc(sizeof(struct  stab)); // выделение памяти под новый элемент списка
     int counter = 0;

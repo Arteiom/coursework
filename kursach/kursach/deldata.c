@@ -1,5 +1,6 @@
 #include "Header.h"
-deldata(struct  stab* head, int n) {
+
+void deldata(struct  stab* head, int n) {
 	// Объявляем указатели на текущий элемент и предыдущий элемент структуры stab
 	struct  stab* current = NULL, * prev = NULL;
 	// Выделяем память для новой структуры stab

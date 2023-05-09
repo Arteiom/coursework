@@ -1,5 +1,5 @@
 #include "Header.h"
-finddata(struct  stab* head, int n) {
+void finddata(struct  stab* head, int n) {
     struct  stab* current = NULL;
     int i = 0, findd = 0;
 
