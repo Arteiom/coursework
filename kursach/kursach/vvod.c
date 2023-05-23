@@ -59,44 +59,47 @@ struct stab* vvod(struct stab* head, struct stab ** tail, int* count1) {
 
 
 		printf("Введите марку %d стабилизатора: ", count + 1); // выводим сообщение для ввода марки стабилизатора
-		res = scanf("%s", current->mark); // считываем введенную марку стабилизатора и сохраняем в структуре current
+		res = scanf("%11s", current->mark); // считываем введенную марку стабилизатора и сохраняем в структуре current
 		while (res != 1 || current->mark <= 0) { // проверяем, что введенное значение корректно
-			printf("Значение введено не верно, повторите ввод: "); // если значение некорректно, выводим сообщение об ошибке
-			res = scanf("%s", current->mark); // повторно считываем значение марки
+			printf("Значение марки введено не верно, повторите ввод: "); // если значение некорректно, выводим сообщение об ошибке
 			while (getchar() != '\n')  continue; // очищаем буфер ввода
+			res = scanf("%11s", current->mark); // повторно считываем значение марки			
 		}
+		while (getchar() != '\n')  continue; 
+
 
 		// аналогично для следующих полей структуры current: КПД, внутреннее сопротивление, коэффициент стабилизации, коэффициент сглаживания пульсаций
 		printf("Введите КПД %d стабилизатора напряжения: ", count + 1);
 		res = scanf("%d", &current->KPD);
 		while (res != 1 || current->KPD < 0) {
-			printf("Значение введено не верно, повторите ввод: ");
-			res = scanf("%d", &current->KPD);
+			printf("Значение КПД введено не верно, повторите ввод: ");
 			while (getchar() != '\n')  continue;
+			res = scanf("%d", &current->KPD);		
 		}
 
 		printf("Введите внутреннее сопротивление %d стабилизатора напряжения: ", count + 1);
 		res = scanf("%d", &current->Rin);
 		while (res != 1 || current->Rin < 0) {
-			printf("Значение введено не верно, повторите ввод: ");
-			res = scanf("%d", &current->Rin);
+			printf("Значение внутреннего сопротивления введено не верно, повторите ввод: ");
 			while (getchar() != '\n')  continue;
+			res = scanf("%d", &current->Rin);			
 		}
 
 		printf("Введите коэффициент стабилизации %d стабилизатора напряжения: ", count + 1);
 		res = scanf("%d", &current->Kst);
 		while (res != 1 || current->Kst < 0) {
-			printf("Значение введено не верно, повторите ввод: ");
-			res = scanf("%d", &current->Kst);
+			printf("Значение коэффициента стабилизации введено не верно, повторите ввод: ");
 			while (getchar() != '\n')  continue;
+			res = scanf("%d", &current->Kst);
+			
 		}
 
 		printf("Введите коэффициент сглаживания пульсаций %d стабилизатора напряжения: ", count + 1);
 		res = scanf("%d", &current->Ksp);
 		while (res != 1 || current->Ksp < 0) {
-			printf("Значение введено не верно, повторите ввод: ");
-			res = scanf("%d", &current->Ksp);
+			printf("Значение коэффициента сглаживания пульсаций введено не верно, повторите ввод: ");
 			while (getchar() != '\n')  continue;
+			res = scanf("%d", &current->Ksp);
 		}
 
 		while (getchar() != '\n')  continue; // очищаем буфер ввода

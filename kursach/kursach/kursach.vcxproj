@@ -131,7 +131,7 @@
   <ItemGroup>
     <ClCompile Include="arithmetic_coding.c" />
     <ClCompile Include="merge_Mark.c" />
-    <ClCompile Include="merge_KPD.c" />
+    <ClCompile Include="merge_Num.c" />
     <ClCompile Include="correct.c" />
     <ClCompile Include="deldata.c" />
     <ClCompile Include="finddata.c" />

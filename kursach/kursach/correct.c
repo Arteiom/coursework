@@ -1,7 +1,7 @@
 #include "Header.h"
 void correct(struct  stab* head, int n) {
     struct  stab* current = NULL;
-    int counter = 0, choice;
+    int counter = 0, choice, res = 0;
     current = head;
     char ans = 0;
 
@@ -21,26 +21,54 @@ void correct(struct  stab* head, int n) {
         switch (choice) {
         case 1:
             printf("Введите новое название марки: ");
-            scanf("%s", current->mark);
+            res = scanf("%11s", current->mark); 
+            while (res != 1 || current->mark <= 0) {
+                printf("Значение марки введено не верно, повторите ввод: "); 
+                while (getchar() != '\n')  continue; 
+                res = scanf("%11s", current->mark); 		
+            }
+            while (getchar() != '\n')  continue;
+
             break;
         case 2:
             printf("Введите новое значение КПД стабилизатора напряжения: ");
-            scanf("%d", &current->KPD);
+            res = scanf("%d", &current->KPD);
+            while (res != 1 || current->KPD < 0) {
+                printf("Значение КПД введено не верно, повторите ввод: ");
+                while (getchar() != '\n')  continue;
+                res = scanf("%d", &current->KPD);
+            }
             break;
         case 3:
             printf("Введите новое значение внутреннего сопротивления стабилизатора напряжения : ");
-            scanf("%d", &current->Rin);
+            res = scanf("%d", &current->Rin);
+            while (res != 1 || current->Rin < 0) {
+                printf("Значение внутреннего сопротивления введено не верно, повторите ввод: ");
+                while (getchar() != '\n')  continue;
+                res = scanf("%d", &current->Rin);
+            }
             break;
         case 4:
             printf("Введите новое значение коэффициента стабилизации стабилизатора напряжения: ");
-            scanf("%d", &current->Kst);
+            res = scanf("%d", &current->Kst);
+            while (res != 1 || current->Kst < 0) {
+                printf("Значение внутреннего сопротивления введено не верно, повторите ввод: ");
+                while (getchar() != '\n')  continue;
+                res = scanf("%d", &current->Kst);
+            }
             break;
         case 5:
             printf("Введите новое значение коэффициента сглаживания пульсаций стабилизатора напряжения: ");
-            scanf("%d", &current->Ksp);
+            res = scanf("%d", &current->Ksp);
+            while (res != 1 || current->Ksp < 0) {
+                printf("Значение внутреннего сопротивления введено не верно, повторите ввод: ");
+                while (getchar() != '\n')  continue;
+                res = scanf("%d", &current->Ksp);
+            }        
             break;
         case 0: printf("Корректировка окончена\n");
-            return 0;
+            while (getchar() != '\n') continue;          
+            return;
             break;
         default:
             printf("Пункт меню выбран неправильно. Попробуйте ещё раз!!!!\n");

@@ -45,16 +45,16 @@
     <ClCompile Include="merge_Mark.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="merge_KPD.c">
+    <ClCompile Include="merge_Num.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="arithmetic_coding.c">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

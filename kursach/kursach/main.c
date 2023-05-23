@@ -4,14 +4,14 @@
 int main(void) {
 
     struct  stab* head = NULL, * tail = NULL;
-    int i = 0, k = 0, n, res = 0, count = 0;
+    int i = 0, k = 0, n, Result = 0, count = 0;
     unsigned char ans = 0;
 
     int dir = 1;
 
     system("chcp 1251>nul");
     while (1) {
-        printf("а. Создание справочника в памяти (Ввод данных).\nб. Вывод справочника на экран.\nв. Добавление данных после записи с указанным номером \nг. Удаление данных с указанным номером\nд. Корректировка данных с указанным номером\nе. Поиск данных по любому указанному пользователем полю\nж. Сортировка слиянием по текстовому полю Mark\nз. Сортировка слиянием по числовому полю KPD\nи. Обработка хранимой в файле информации\nк. Сохранение справочника в файл.\nл. Открытие справочника из файла.\n0. выход из программы.\nВыберите номер необходимого варианта:");
+        printf("а. Создание справочника в памяти (Ввод данных).\nб. Вывод справочника на экран.\nв. Добавление данных после записи с указанным номером \nг. Удаление данных с указанным номером\nд. Корректировка данных с указанным номером\nе. Поиск данных по любому указанному пользователем полю\nж. Сортировка слиянием по текстовому полю Mark\nз. Сортировка слиянием по любому указанному пользователем числовому полю\nи. Обработка хранимой в файле информации\nк. Сохранение справочника в файл.\nл. Открытие справочника из файла.\n0. выход из программы.\nВыберите номер необходимого варианта:");
 
         scanf("%c", &ans);
         while (getchar() != '\n')  continue;
@@ -31,41 +31,41 @@ int main(void) {
             break;
         case 'в':
             printf("Введите номер записи после которой необходимо добавить новый элемент: ");
-            res = scanf("%d", &n);
-            while (res != 1 || n < 0) {
+            Result = scanf("%d", &n);
+            while (Result != 1 || n < 0 || n > count) {
                 printf("Значение введено не верно, повторите ввод: ");
-                res = scanf("%d", &n);
                 while (getchar() != '\n')  continue;
+                Result = scanf("%d", &n);               
             }
             newdata(head, n);
             break;
         case 'г':
             printf("Введите номер записи которую необходимо удалить: ");
-            res = scanf("%d", &n);
-            while (res != 1 || n < 0) {
+            Result = scanf("%d", &n);
+            while (Result != 1 || n < 0 || n > count) {
                 printf("Значение введено не верно, повторите ввод: ");
-                res = scanf("%d", &n);
                 while (getchar() != '\n')  continue;
+                Result = scanf("%d", &n);          
             }
             deldata(head, n);
             break;
         case 'д':
             printf("Введите номер записи которую необходимо откорректировать: ");
-            res = scanf("%d", &n);
-            while (res != 1 || n < 0) {
+            Result = scanf("%d", &n);
+            while (Result != 1 || n < 0 || n > count) {
                 printf("Значение введено не верно, повторите ввод: ");
-                res = scanf("%d", &n);
                 while (getchar() != '\n')  continue;
+                Result = scanf("%d", &n);    
             }
             correct(head, n); 
             break;
         case 'е':
             printf("Введите номер поля, по которому необходимо произвести поиск: ");
-            res = scanf("%d", &n);
-            while (res != 1 || n < 0) {
+            Result = scanf("%d", &n);
+            while (Result != 1 || n < 0) {
                 printf("Значение введено не верно, повторите ввод: ");
-                res = scanf("%d", &n);
                 while (getchar() != '\n')  continue;
+                Result = scanf("%d", &n);             
             }
             finddata(head, n);
             break;
@@ -73,11 +73,12 @@ int main(void) {
             mergeSortMarkWrapper(&head, &count, dir);
             break;
         case 'з':
-            mergeSortNumWrapper(&head, &count, dir);
+         
+            mergeSortNumWrapper(&head, &count);
             break;
         case 'и':
-            encode(FILE_NAME, "encoded.txt");
-            decode("encoded.txt", "decoded.txt");    
+            perform_encoding(FILE_NAME, "encoded.txt");
+            perform_decoding("encoded.txt", "decoded.txt");    
             break;
         case 'к':
             fvvod(head);

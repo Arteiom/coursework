@@ -114,6 +114,7 @@ void mergeSortMarkWrapper(struct stab** headRef, int* kolvo, int dir) {
         }
     }
     mergeSortStr(headRef, kolvo, c);
+    while (getchar() != '\n')  continue;
 }
 
 
