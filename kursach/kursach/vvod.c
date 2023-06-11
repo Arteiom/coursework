@@ -46,7 +46,8 @@ struct stab* vvod(struct stab* head, struct stab ** tail, int* count1) {
 	}
 
 	// запрашиваем у пользователя данные для новых элементов списка
-	for (; ; count++) {
+	for (; ;) {
+		
 		current = (struct stab*)malloc(sizeof(struct stab));
 		if (head == NULL)
 			head = current;
@@ -56,7 +57,7 @@ struct stab* vvod(struct stab* head, struct stab ** tail, int* count1) {
 		}
 		current->next = NULL;
 
-
+	
 
 		printf("Введите марку %d стабилизатора: ", count + 1); // выводим сообщение для ввода марки стабилизатора
 		res = scanf("%11s", current->mark); // считываем введенную марку стабилизатора и сохраняем в структуре current
@@ -117,7 +118,7 @@ struct stab* vvod(struct stab* head, struct stab ** tail, int* count1) {
 			scanf("%c", &vibor);
 			while (getchar() != '\n')  continue;
 		}
-
+		count += 1;
 		switch (toupper(vibor)) {
 		case 'Y':
 			// сохраняем количество элементов в переменной count1 и возвращаем указатель на голову списка
@@ -127,10 +128,6 @@ struct stab* vvod(struct stab* head, struct stab ** tail, int* count1) {
 			// иначе пропускаем этот шаг и продолжаем добавлять новые элементы в список
 			break;
 		}
-
+		
 	}
-	while (getchar() != '\n')
-		continue;
-
-	return head;
 }

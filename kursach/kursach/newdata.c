@@ -14,10 +14,11 @@ void newdata(struct  stab* head, int n) {
     }
     else {
         // обходим список до нужной позиции
-        while (counter < (n - 1)) {
+        while (counter < (n-1)) {
             current = current->next; // переходим к следующему элементу списка
-            counter++;
+			counter++;
         }
+
 
         // вставляем новый элемент в список
         prev = current->next; // запоминаем следующий элемент списка
@@ -71,6 +72,7 @@ void newdata(struct  stab* head, int n) {
 			while (getchar() != '\n')  continue;
 			res = scanf("%d", &new->Ksp);
 		}
+		
 
 
 		printf("Данные введены\n");

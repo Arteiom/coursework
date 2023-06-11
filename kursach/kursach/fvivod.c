@@ -8,6 +8,8 @@ struct stab* fvivod(struct stab* head, int* count1) {
     // Открытие файла для чтения
     FILE* fl = fopen(FILE_NAME, "r");
 
+
+
     // Чтение количества элементов из файла
     fscanf(fl, "%d", &count);
     // Цикл, который создает структуры и заполняет их поля значениями из файла

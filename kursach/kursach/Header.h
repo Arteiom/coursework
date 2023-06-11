@@ -25,7 +25,7 @@ void deldata(struct  stab*, int);
 void correct(struct  stab* head, int n);
 void finddata(struct  stab* head, int n);
 void fvvod(struct  stab* head);
-struct  stab* fvivod(struct  stab* head, int*);
+struct stab* fvivod(struct stab* head, int* count1);
 
 
 //----------Арифметическое кодироование-------------
